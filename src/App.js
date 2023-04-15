@@ -7,7 +7,7 @@ function App() {
     const [calc, setState] = useState("");
     const [result, setResult] = useState("");
 
-    const ops = ['/', '*', '+', '-', '.'];
+    const operations = ['/', '*', '+', '-', '.', '_'];
 
 
     const clearCalc = () =>{
@@ -15,15 +15,17 @@ function App() {
       setState("");
     }
     const updateCalc = value => {
-      if ((ops.includes(value) && calc === '') || (ops.includes(value) && ops.includes(calc.slice(-1))))
+      if ((operations.includes(value) && calc === '') || (operations.includes(value) && operations.includes(calc.slice(-1))))
       {
         return;
       }
       setState(prev => prev + value);
-
-      if (!ops.includes(value)){
+      if (!operations.includes(value)){
+        if (calc === '_'){
+          console.log(value);
+        }
         // eslint-disable-next-line
-        setResult(eval(calc + value).toString());
+        setResult(eval(calc + value));
       }
     }
     const equalto = () => {
@@ -48,11 +50,12 @@ function App() {
             {result ? <span>{result}</span>: 0}
           </div>
           <div className='curr_out'>
-            {calc || '0'}
+            {calc || "0"}
           </div>
         </div>
         <button className='span_two' onClick={()=>clearCalc()}>C</button>
-        <button className='span_two' onClick={del}>DEL</button>
+        <button className='color-org' onClick={del}>DEL</button>
+        <button className='color-org' onClick={()=>updateCalc('_')}>_</button>
         <button onClick={()=> updateCalc('7')}>7</button>
         <button onClick={()=> updateCalc('8')}>8</button>
         <button onClick={()=> updateCalc('9')}>9</button>
@@ -67,7 +70,7 @@ function App() {
         <button className='color-org' onClick={()=> updateCalc("-")}>-</button>
         <button onClick={()=> updateCalc('0')}>0</button>
         <button onClick={()=> updateCalc(".")}>.</button>
-        <button className='color-org' onClick={equalto}>=</button>
+        <button className='color-org' onClick={() => equalto()}>=</button>
         <button className='color-org' onClick={()=> updateCalc("+")}>+</button>
       </div>
     );
