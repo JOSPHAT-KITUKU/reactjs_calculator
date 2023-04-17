@@ -1,0 +1,26 @@
+.display{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 70px;
+    width: 98%;
+    background-color: black;
+    color: white;
+    margin: auto;
+    margin-top: 5%;
+    font-size: large;
+    font-weight: bold;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.top-preview{
+    font-size: 12px;
+    color: gray;
+    margin-top: 2%;
+    font-family:'Courier New', Courier, monospace;
+}
+.bottom-ans{
+    font-size: 20px;
+    font-family:'Courier New', Courier, monospace;
+}

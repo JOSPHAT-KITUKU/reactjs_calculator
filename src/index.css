@@ -1,63 +1,31 @@
 *{
   box-sizing: border-box;
 }
-.Calc{
-  border: 3px solid rgb(31, 31, 235);
-  display: flex;
-  width: 300px;
-  height: 400px;
-  flex-flow: row wrap;
-  background-color: rgb(0, 119, 255);
-  margin: auto;
-  margin-top: 10%;
-}
-body {
+body{
   margin: 0;
-  background: linear-gradient(to right, #00AAFF, #00FF6C);
-  color: white;
+  padding: 0;
 }
-.color-org{
+.App{
+  margin: auto;
+  width: 320px;
+  height: 60vh;
+  border: 2px solid rebeccapurple;
+  margin-top: 1%;
   background-color: skyblue;
-  color: red;
-}
-.display{
-  height: 70px, auto;
-  margin: 1%;
-  margin-top: 4%;
-  flex-basis: 98%;
-  background-color: black;
   display: flex;
-  flex-direction: column;
-  font-size: large;
-  align-items: flex-end;
-  justify-content: space-around;
-  word-wrap: break-word;
-  word-break: break-all;
+  flex-flow: column;
 }
-
-.span_two{
-  flex-basis: 48%;
-  margin: 1%;
-  background-color: hsl(197, 71%, 73%);
-  border-radius: 8px;
-  color: red;
+.title{
+  margin: auto;
+  margin-top: 6%;
+  text-align: center;
 }
-button{
-  flex-basis: 23%;
-  margin: 1%;
-  font-weight: bold;
-  border-radius: 8px;
+.disp{
+  height: 100px auto;
 }
-
-.prev-out{
-  color: rgb(71, 70, 70);
-  font-size: small;
+.App_wrapper{
+  background-color: aqua;
 }
-
-.curr_out{
-  color: white;
-  font-size: large;
-}
-button:hover, button:focus{
-  background-color: orange;
+.butt{
+  margin-top: 4%;
 }

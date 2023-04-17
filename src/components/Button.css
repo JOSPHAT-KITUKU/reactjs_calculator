@@ -1,0 +1,32 @@
+.buttons{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0;
+    height: 10vh;
+}
+.span-two{
+    flex-basis: 45%;
+    margin: 1%;
+    margin-top: 3%;
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    flex-grow: 1;
+    background-color: rgb(223, 178, 54);
+}
+button{
+    flex-basis: 23%;
+    margin: 1%;
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 40px;
+}
+.color-org{
+    color: red;
+    background-color: rgb(223, 178, 54);
+    border-radius: 8px;
+}
+button:hover{
+    background-color: rgb(255, 255, 255, 0.5);
+}
