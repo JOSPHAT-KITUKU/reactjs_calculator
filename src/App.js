@@ -36,6 +36,8 @@ function App() {
     }
     const num = val.slice(0, -1);
     setResult(num);
+     // eslint-disable-next-line
+    setPrev(eval(num).toString());
   }
   return (
     <div className='App-wrapper'>
